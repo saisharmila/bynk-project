@@ -1,7 +1,9 @@
 import {combineReducers} from "redux"
 
 import countriesReducer from "./countriesReducer"
+import formReducer from "./formReducer"
 
 export default combineReducers({
-    countries : countriesReducer
+    countries : countriesReducer,
+    formValidity : formReducer
 })
