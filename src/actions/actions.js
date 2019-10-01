@@ -8,3 +8,27 @@ export const fetchCountries = () =>{
         payload : request
     }
 }
+
+export const validateSSN = ssn => {
+
+    return{
+        type : "VALIDATE_SSN",
+        payload : ssn
+    }
+}
+
+export const validateEmail = email => {
+    
+    return{
+        type : "VALIDATE_EMAIL",
+        payload : email
+    }
+}
+
+export const validatePhoneNumber = number => {
+
+    return{
+        type : "VALIDATE_PHONE",
+        payload : number
+    }
+}

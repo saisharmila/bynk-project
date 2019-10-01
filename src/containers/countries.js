@@ -11,7 +11,7 @@ class Countries extends React.Component{
 
     countriesMapper(countries){
         return countries.map(country => {
-            return <option value={country.name}>{country.name}</option>
+            return <option key={country.name} value={country.name}>{country.name}</option>
         })
     }
 
