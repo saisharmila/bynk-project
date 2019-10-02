@@ -17,11 +17,17 @@ class Email extends React.Component{
     }
 
     render(){
-        const email = document.getElementById("email")
+        const email = document.getElementById("helper-text-email")
         formValidator(email, this.props.isEmailValid)
         return(
-            <div>
-                <input id="email" type="email" placeholder="foo@bar.com" onBlur={this.validateEmail} /> 
+        <div>
+            <div className="input-field col s6">
+            <i className="material-icons prefix">email</i>
+            <input id="email" type="email" onBlur={this.validateEmail} />
+            <label htmlFor="email">Email</label>
+            <span style={{visibility : "hidden"}} id="helper-text-email" className="helper-text"  >Invalid email!</span>
+        </div>
+              
             </div>
         )
     }

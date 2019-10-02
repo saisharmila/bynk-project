@@ -11,20 +11,20 @@ class Countries extends React.Component{
 
     countriesMapper(countries){
         return countries.map(country => {
-            return <option key={country.name} value={country.name}>{country.name}</option>
+            return <option data-icon={country.flag} key={country.name} value={country.name}>{country.name}</option>
         })
     }
 
     render(){
         if(this.props.countries){
             return(
-                <div>
-                    <select>
+                <div className="input-field col s12 m6">
+                    <select id="countries" className="icons">
                         {this.countriesMapper(this.props.countries)}
                     </select>
                 </div>
             )
-        }else return <div>loading...</div>
+        }else return null
         
     }
 }
