@@ -17,12 +17,13 @@ class App extends React.Component {
 
   submitData(e){
     e.preventDefault()
-    
+
     if(this.props.formHasError){
-      console.log("Success")
       alert("Form has errors, please check and resubmit")
       
     }else {
+      console.log("Success")
+      window.localStorage.clear()
       alert("Form is looking good :)")
     }
     
@@ -49,6 +50,7 @@ class App extends React.Component {
 
 function mapStateToProps(state){
   const {isSSNValid, isEmailValid, isPhoneNumberValid} = state.formValidity
+
   return {
     formHasError : !(isSSNValid && isEmailValid && isPhoneNumberValid)
   }

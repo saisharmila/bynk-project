@@ -9,13 +9,21 @@ class PhoneNumber extends React.Component{
     constructor(props){
         super(props)
 
+        this.state = {
+            phone : window.localStorage.getItem("phone") ? window.localStorage.getItem("phone") : ""
+        } 
+
+        this.handleChange = this.handleChange.bind(this)
         this.validatePhone = this.validatePhone.bind(this)
     }
 
     validatePhone(event){
-        this.props.validatePhoneNumber(event.target.value)
+        this.props.validatePhoneNumber(event.target.value)   
+    }
 
-        
+    handleChange(e){
+        this.setState({phone : e.target.value})
+        window.localStorage.setItem("phone", e.target.value)
     }
 
     render(){
@@ -25,7 +33,7 @@ class PhoneNumber extends React.Component{
             <div>
                 <div className="input-field col s6">
           <i className="material-icons prefix">phone</i>
-          <input id="phone" type="tel" onBlur={this.validatePhone} class="validate" />
+          <input onChange={this.handleChange} value={this.state.phone} id="phone" type="tel" onBlur={this.validatePhone} class="validate" />
           <label htmlFor="phone">Telephone</label>
           <span style={{visibility : " hidden"}} id="helper-text-phone" className="helper-text">Invalid Swedish phone number!</span>
         </div>

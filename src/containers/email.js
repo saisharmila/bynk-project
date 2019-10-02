@@ -9,11 +9,24 @@ class Email extends React.Component{
     constructor(props){
         super(props)
 
+        this.state = {
+            email : localStorage.getItem("email") ? localStorage.getItem("email") : ""
+        }
+         this.handleChange = this.handleChange.bind(this)
         this.validateEmail = this.validateEmail.bind(this)
+    }
+
+    componentDidMount(){
+        
     }
 
     validateEmail(event){
         this.props.validateEmail(event.target.value)
+    }
+
+    handleChange(e){
+        this.setState({email : null})
+        window.localStorage.setItem("email", e.target.value)
     }
 
     render(){
@@ -23,7 +36,7 @@ class Email extends React.Component{
         <div>
             <div className="input-field col s6">
             <i className="material-icons prefix">email</i>
-            <input id="email" type="email" onBlur={this.validateEmail} />
+            <input value={this.state.email} onChange={this.handleChange} id="email" type="email" onBlur={this.validateEmail} />
             <label htmlFor="email">Email</label>
             <span style={{visibility : "hidden"}} id="helper-text-email" className="helper-text"  >Invalid email!</span>
         </div>
