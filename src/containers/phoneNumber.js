@@ -19,11 +19,17 @@ class PhoneNumber extends React.Component{
     }
 
     render(){
-        const phoneForm = document.getElementById("phone")
+        const phoneForm = document.getElementById("helper-text-phone")
         formValidator(phoneForm, this.props.isPhoneNumberValid)
         return(
             <div>
-                <input id="phone" placeholder="+46XXXXXXXXX" type="tel" onBlur={this.validatePhone} /> 
+                <div className="input-field col s6">
+          <i className="material-icons prefix">phone</i>
+          <input id="phone" type="tel" onBlur={this.validatePhone} class="validate" />
+          <label htmlFor="phone">Telephone</label>
+          <span style={{visibility : " hidden"}} id="helper-text-phone" className="helper-text">Invalid Swedish phone number!</span>
+        </div>
+               
             </div>
         )
     }

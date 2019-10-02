@@ -19,6 +19,7 @@ class App extends React.Component {
     e.preventDefault()
     
     if(this.props.formHasError){
+      console.log("Success")
       alert("Form has errors, please check and resubmit")
       
     }else {
@@ -36,7 +37,9 @@ class App extends React.Component {
         <SwedishSSN />
         <Email />
         <PhoneNumber />
-        <button type="submit">Submit</button>
+        <button className="waves-effect waves-light btn-small" type="submit">
+          Submit
+        </button>
         </form>
       </div>
     );
