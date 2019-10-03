@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bynk-preview/build/static/css/main.40bae443.chunk.css",
+    "main.js": "/bynk-preview/build/static/js/main.88bf23c8.chunk.js",
+    "main.js.map": "/bynk-preview/build/static/js/main.88bf23c8.chunk.js.map",
+    "runtime-main.js": "/bynk-preview/build/static/js/runtime-main.4e4a236b.js",
+    "runtime-main.js.map": "/bynk-preview/build/static/js/runtime-main.4e4a236b.js.map",
+    "static/js/2.0e3d11a5.chunk.js": "/bynk-preview/build/static/js/2.0e3d11a5.chunk.js",
+    "static/js/2.0e3d11a5.chunk.js.map": "/bynk-preview/build/static/js/2.0e3d11a5.chunk.js.map",
+    "index.html": "/bynk-preview/build/index.html",
+    "precache-manifest.7b572917c6364bd6c88b99945747b814.js": "/bynk-preview/build/precache-manifest.7b572917c6364bd6c88b99945747b814.js",
+    "service-worker.js": "/bynk-preview/build/service-worker.js",
+    "static/css/main.40bae443.chunk.css.map": "/bynk-preview/build/static/css/main.40bae443.chunk.css.map"
+  }
+}
